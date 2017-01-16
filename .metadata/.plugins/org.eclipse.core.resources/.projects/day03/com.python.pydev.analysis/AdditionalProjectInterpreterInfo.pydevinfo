@@ -1,0 +1,21 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/wyh/PythonStudy/.metadata/.plugins/org.eclipse.core.resources/.projects/day03/com.python.pydev.analysis/v2_indexcache
+example.__init__|1484576449224543000|/home/wyh/PythonStudy/day03/example/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+0
+-- END DICTIONARY
+-- START TREE 1
+1
+car|0|
+-- END TREE
+-- START TREE 2
+6
+__i|0|
+bar|0|
+bra|0|
+col|0|
+mat|0|
+mov|0|
+-- END TREE

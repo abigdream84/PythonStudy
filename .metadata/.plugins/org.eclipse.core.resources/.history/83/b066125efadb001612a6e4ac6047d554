@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+class Car(object):
+
+    material = 'metal'
+    
+    def __init__(self, brand, colour):
+        self.Brand = brand
+        self.Colour = colour
+
+
+car1 = Car('BMW', 'Red')
+#print(car1.Brand)
+#print(car1.Colour)
+print(Car.Brand)
+
+
+
+
+
+
+
