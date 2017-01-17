@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+def outter(fun):
+    def wrapper():
+        fun()
+    return wrapper
+
+@outter
+def Fun1():
+    print('Fun1')
+
+Fun1()
+
+
+

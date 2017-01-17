@@ -5,9 +5,10 @@ class Car(object):
 
     material = 'metal'
     
-    def __init__(self, brand, colour):
+    def __init__(self, brand, colour, engin):
         self.Brand = brand
         self.Colour = colour
+        self.__Engin = engin
 
     def move(self, direction):
         print(direction)
@@ -16,14 +17,40 @@ class Car(object):
     def bar():
         print('staticmethod1')
 
+    @property
+    def Foo(self):
+        return self.Brand
+    
+    @Foo.setter
+    def Foo(self,value):
+        self.Brand = value
+        
+
+    def read1(self):
+        print(self.__Engin)
+    
+    def __fix(self):
+        print('fix')
+    
+    def read2(self):
+        self.__fix()
 
 
-car1 = Car('BMW', 'Red')
+car1 = Car('BMW', 'Red', 'AAA')
 #print(car1.Brand)
 #print(car1.Colour)
 #print(Car.material)
 #car1.move('backward')
-Car.bar()
+#Car.bar()
+#result = car1.Foo
+#print(result)
+print(car1.Foo)
+car1.Foo='BBB'
+print(car1.Foo)
+
+
+
+
 
 
 

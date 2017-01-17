@@ -1,21 +1,37 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /home/wyh/PythonStudy/.metadata/.plugins/org.eclipse.core.resources/.projects/day03/com.python.pydev.analysis/v2_indexcache
-example.__init__|1484576449224543000|/home/wyh/PythonStudy/day03/example/__init__.py
+example.object|1484634015631212000|/home/wyh/PythonStudy/day03/example/object.py
+example.reflect2|1484634275619224000|/home/wyh/PythonStudy/day03/example/reflect2.py
+example.reflect1|1484634356899228000|/home/wyh/PythonStudy/day03/example/reflect1.py
+example.__init__|1484630907671058000|/home/wyh/PythonStudy/day03/example/__init__.py
+example.decorate|1484632562223140000|/home/wyh/PythonStudy/day03/example/decorate.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+5
+1=example.object
+2=example.reflect1
+5=Car
+4=Car.__init__
+3=example.decorate
 -- END DICTIONARY
 -- START TREE 1
-1
-car|0|
+4
+car|2|Car!9@car1!11@
+fun|4|Fun2!18@Fun1!18@Fun1!26@Fun3!18@
+out|1|outter!26@
+res|1|response!27@
 -- END TREE
 -- START TREE 2
-6
-__i|0|
-bar|0|
-bra|0|
-col|0|
-mat|0|
-mov|0|
+10
+__e|1|__Engin!4&11@
+__f|1|__fix!5&10@
+__i|1|__init__!5&10@
+bar|1|bar!5&10@
+bra|1|Brand!4&11@
+col|1|Colour!4&11@
+foo|1|Foo!5&10@
+mat|1|material!5&11@
+mov|1|move!5&10@
+rea|2|read2!5&10@read1!5&10@
 -- END TREE
