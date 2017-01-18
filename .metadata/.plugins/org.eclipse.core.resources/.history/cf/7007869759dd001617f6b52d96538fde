@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+
+try:
+#    import aaa
+    fun()
+except NameError:
+#    print e
+    print('error')
+
+
+
+
+
+

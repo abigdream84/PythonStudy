@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+
+try:
+    import aaa
+
+except ImportError,e:
+    print e
+    print('error')
+
+
+
+
+
+
