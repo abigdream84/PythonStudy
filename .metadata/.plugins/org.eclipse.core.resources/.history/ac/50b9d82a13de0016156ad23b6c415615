@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+
+import pymysql
+
+db = pymysql.connect("127.0.0.1","root","root","ebankdb")
+cursor = db.curcor()
+cursor.execute("select * from test2")
+cursor.fetchall()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

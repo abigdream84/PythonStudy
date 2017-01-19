@@ -968,3 +968,155 @@ java.io.FileNotFoundException: /home/wyh/PythonStudy/.metadata/.plugins/org.pyth
 
 !ENTRY org.python.pydev.debug 4 4 2017-01-17 14:41:57.259
 !MESSAGE Unexpected resume reason code
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-01-19 11:26:38.890
+!MESSAGE Info: Rebuilding internal caches: /home/wyh/PythonStudy/.metadata/.plugins/org.eclipse.core.resources/.projects/day05/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)
+!SESSION 2017-01-19 14:13:03.988 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2017-01-19 14:13:36.564
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-01-19 14:13:36.564
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		ActionDelegateHandlerProxy(null,com.python.pydev.analysis.actions.PyGlobalsBrowserWorkbench),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		ActionDelegateHandlerProxy(null,org.python.pydev.editor.actions.PyShowBrowser),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+!SESSION 2017-01-19 14:18:10.479 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/wyh/PythonStudy -os linux -ws gtk -arch x86_64
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-01-19 14:19:06.072
+!MESSAGE Did not expect to find item below node: Assign[targets=[Name[id=oid, ctx=Store, reserved=false]], value=null] (module: encoder.py).
+!STACK 0
+java.lang.RuntimeException: Did not expect to find item below node: Assign[targets=[Name[id=oid, ctx=Store, reserved=false]], value=null] (module: encoder.py).
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.endScopesInStack(FastDefinitionsParser.java:589)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.handleNewLine(FastDefinitionsParser.java:380)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.extractBody(FastDefinitionsParser.java:249)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.parse(FastDefinitionsParser.java:676)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalTokensInfo.addAstInfo(AbstractAdditionalTokensInfo.java:314)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreInfoForModuleManager(AbstractAdditionalInfoWithBuild.java:264)
+	at com.python.pydev.analysis.additionalinfo.AdditionalSystemInterpreterInfo.recreateAllInfo(AdditionalSystemInterpreterInfo.java:179)
+	at com.python.pydev.analysis.additionalinfo.builders.InterpreterObserver.notifyDefaultPythonpathRestored(InterpreterObserver.java:36)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.restorePythopathForInterpreters(AbstractInterpreterManager.java:740)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:657)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$5.run(AbstractInterpreterPreferencesPage.java:282)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-01-19 14:19:06.089
+!MESSAGE Did not expect to find item below node: Assign[targets=[Name[id=defaultValue, ctx=Store, reserved=false]], value=null] (module: base.py).
+!STACK 0
+java.lang.RuntimeException: Did not expect to find item below node: Assign[targets=[Name[id=defaultValue, ctx=Store, reserved=false]], value=null] (module: base.py).
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.endScopesInStack(FastDefinitionsParser.java:589)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.handleNewLine(FastDefinitionsParser.java:380)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.extractBody(FastDefinitionsParser.java:249)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.parse(FastDefinitionsParser.java:676)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalTokensInfo.addAstInfo(AbstractAdditionalTokensInfo.java:314)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreInfoForModuleManager(AbstractAdditionalInfoWithBuild.java:264)
+	at com.python.pydev.analysis.additionalinfo.AdditionalSystemInterpreterInfo.recreateAllInfo(AdditionalSystemInterpreterInfo.java:179)
+	at com.python.pydev.analysis.additionalinfo.builders.InterpreterObserver.notifyDefaultPythonpathRestored(InterpreterObserver.java:36)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.restorePythopathForInterpreters(AbstractInterpreterManager.java:740)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:657)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$5.run(AbstractInterpreterPreferencesPage.java:282)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-01-19 14:19:06.097
+!MESSAGE Did not expect to find item below node: Assign[targets=[Name[id=r, ctx=Store, reserved=false]], value=null] (module: univ.py).
+!STACK 0
+java.lang.RuntimeException: Did not expect to find item below node: Assign[targets=[Name[id=r, ctx=Store, reserved=false]], value=null] (module: univ.py).
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.endScopesInStack(FastDefinitionsParser.java:589)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.handleNewLine(FastDefinitionsParser.java:380)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.extractBody(FastDefinitionsParser.java:249)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.parse(FastDefinitionsParser.java:676)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalTokensInfo.addAstInfo(AbstractAdditionalTokensInfo.java:314)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreInfoForModuleManager(AbstractAdditionalInfoWithBuild.java:264)
+	at com.python.pydev.analysis.additionalinfo.AdditionalSystemInterpreterInfo.recreateAllInfo(AdditionalSystemInterpreterInfo.java:179)
+	at com.python.pydev.analysis.additionalinfo.builders.InterpreterObserver.notifyDefaultPythonpathRestored(InterpreterObserver.java:36)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.restorePythopathForInterpreters(AbstractInterpreterManager.java:740)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:657)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$5.run(AbstractInterpreterPreferencesPage.java:282)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-01-19 14:30:08.689
+!MESSAGE Did not expect to find item below node: Assign[targets=[Name[id=oid, ctx=Store, reserved=false]], value=null] (module: encoder.py).
+!STACK 0
+java.lang.RuntimeException: Did not expect to find item below node: Assign[targets=[Name[id=oid, ctx=Store, reserved=false]], value=null] (module: encoder.py).
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.endScopesInStack(FastDefinitionsParser.java:589)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.handleNewLine(FastDefinitionsParser.java:380)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.extractBody(FastDefinitionsParser.java:249)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.parse(FastDefinitionsParser.java:676)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalTokensInfo.addAstInfo(AbstractAdditionalTokensInfo.java:314)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreInfoForModuleManager(AbstractAdditionalInfoWithBuild.java:264)
+	at com.python.pydev.analysis.additionalinfo.AdditionalSystemInterpreterInfo.recreateAllInfo(AdditionalSystemInterpreterInfo.java:179)
+	at com.python.pydev.analysis.additionalinfo.builders.InterpreterObserver.notifyDefaultPythonpathRestored(InterpreterObserver.java:36)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.restorePythopathForInterpreters(AbstractInterpreterManager.java:740)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:657)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$5.run(AbstractInterpreterPreferencesPage.java:282)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-01-19 14:30:08.697
+!MESSAGE Did not expect to find item below node: Assign[targets=[Name[id=defaultValue, ctx=Store, reserved=false]], value=null] (module: base.py).
+!STACK 0
+java.lang.RuntimeException: Did not expect to find item below node: Assign[targets=[Name[id=defaultValue, ctx=Store, reserved=false]], value=null] (module: base.py).
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.endScopesInStack(FastDefinitionsParser.java:589)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.handleNewLine(FastDefinitionsParser.java:380)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.extractBody(FastDefinitionsParser.java:249)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.parse(FastDefinitionsParser.java:676)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalTokensInfo.addAstInfo(AbstractAdditionalTokensInfo.java:314)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreInfoForModuleManager(AbstractAdditionalInfoWithBuild.java:264)
+	at com.python.pydev.analysis.additionalinfo.AdditionalSystemInterpreterInfo.recreateAllInfo(AdditionalSystemInterpreterInfo.java:179)
+	at com.python.pydev.analysis.additionalinfo.builders.InterpreterObserver.notifyDefaultPythonpathRestored(InterpreterObserver.java:36)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.restorePythopathForInterpreters(AbstractInterpreterManager.java:740)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:657)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$5.run(AbstractInterpreterPreferencesPage.java:282)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.python.pydev.shared_core 4 4 2017-01-19 14:30:08.701
+!MESSAGE Did not expect to find item below node: Assign[targets=[Name[id=r, ctx=Store, reserved=false]], value=null] (module: univ.py).
+!STACK 0
+java.lang.RuntimeException: Did not expect to find item below node: Assign[targets=[Name[id=r, ctx=Store, reserved=false]], value=null] (module: univ.py).
+	at org.python.pydev.core.log.Log.log(Log.java:54)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.endScopesInStack(FastDefinitionsParser.java:589)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.handleNewLine(FastDefinitionsParser.java:380)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.extractBody(FastDefinitionsParser.java:249)
+	at org.python.pydev.parser.fastparser.FastDefinitionsParser.parse(FastDefinitionsParser.java:676)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalTokensInfo.addAstInfo(AbstractAdditionalTokensInfo.java:314)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreInfoForModuleManager(AbstractAdditionalInfoWithBuild.java:264)
+	at com.python.pydev.analysis.additionalinfo.AdditionalSystemInterpreterInfo.recreateAllInfo(AdditionalSystemInterpreterInfo.java:179)
+	at com.python.pydev.analysis.additionalinfo.builders.InterpreterObserver.notifyDefaultPythonpathRestored(InterpreterObserver.java:36)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.restorePythopathForInterpreters(AbstractInterpreterManager.java:740)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:657)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$5.run(AbstractInterpreterPreferencesPage.java:282)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)

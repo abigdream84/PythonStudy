@@ -1,4 +1,7 @@
 MODULES_MANAGER_V2
 example.__init__|/home/wyh/PythonStudy/day03/example/__init__.py
+example.decorate|/home/wyh/PythonStudy/day03/example/decorate.py
+example.except|/home/wyh/PythonStudy/day03/example/except.py
 example.object|/home/wyh/PythonStudy/day03/example/object.py
-example.test|/home/wyh/PythonStudy/day03/example/test.py
+example.reflect1|/home/wyh/PythonStudy/day03/example/reflect1.py
+example.reflect2|/home/wyh/PythonStudy/day03/example/reflect2.py
