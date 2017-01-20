@@ -2,44 +2,52 @@
 -- START DISKCACHE_2
 /home/wyh/PythonStudy/.metadata/.plugins/org.eclipse.core.resources/.projects/day05/com.python.pydev.analysis/v2_indexcache
 example.model.__init__|1484883454198526000|/home/wyh/PythonStudy/day05/example/model/__init__.py
+example.MySql|1484883321655614000|/home/wyh/PythonStudy/day05/example/MySql.py
+ebank.utility.__init__|1484899804120546000|/home/wyh/PythonStudy/day05/ebank/utility/__init__.py
+ebank.utility.MySqlHelper|1484902806839747000|/home/wyh/PythonStudy/day05/ebank/utility/MySqlHelper.py
+example.__init__|1484796418662371000|/home/wyh/PythonStudy/day05/example/__init__.py
+example.index|1484898345624474000|/home/wyh/PythonStudy/day05/example/index.py
+ebank.settings|1484900705442748000|/home/wyh/PythonStudy/day05/ebank/settings.py
+ebank.model.__init__|1484899816389556000|/home/wyh/PythonStudy/day05/ebank/model/__init__.py
 example.settings|1484889275697785000|/home/wyh/PythonStudy/day05/example/settings.py
 example.utility.MySqlHelper|1484897396806362000|/home/wyh/PythonStudy/day05/example/utility/MySqlHelper.py
-example.MySql|1484883321655614000|/home/wyh/PythonStudy/day05/example/MySql.py
-example.model.test|1484898464610270000|/home/wyh/PythonStudy/day05/example/model/test.py
-example.__init__|1484796418662371000|/home/wyh/PythonStudy/day05/example/__init__.py
+ebank.index|1484901488087180000|/home/wyh/PythonStudy/day05/ebank/index.py
+example.model.test|1484898851266101000|/home/wyh/PythonStudy/day05/example/model/test.py
+ebank.__init__|1484899773206001000|/home/wyh/PythonStudy/day05/ebank/__init__.py
 example.utility.__init__|1484883415447336000|/home/wyh/PythonStudy/day05/example/utility/__init__.py
-example.index|1484898345624474000|/home/wyh/PythonStudy/day05/example/index.py
 -- END DISKCACHE
 -- START DICTIONARY
-7
-3=example.utility.MySqlHelper
+8
+4=example.utility.MySqlHelper
 1=example.MySql
-7=test
-6=MySqlHelper
-4=example.model.test
-2=example.index
-5=test.__init__
+8=test
+7=MySqlHelper
+2=ebank.utility.MySqlHelper
+5=example.model.test
+3=example.index
+6=test.__init__
 -- END DICTIONARY
 -- START TREE 1
-8
+9
 cur|1|cursor!11@
 db|1|db!11@
-mai|1|main!18@
-mys|1|MySqlHelper!25@
-par|1|params!11@
+han|1|handle!19@
+mai|1|main!26@
+mys|2|MySqlHelper!33@MySqlHelper!17@
+par|2|params!11@params!19@
 rec|1|reCount!11@
-sql|1|sql!11@
-tes|1|test!33@
+sql|2|sql!19@sql!11@
+tes|1|test!41@
 -- END TREE
 -- START TREE 2
 9
-__h|1|__handle!5&35@
-__i|2|__init__!6&26@__init__!7&34@
-del|1|deleteId!7&34@
-exe|2|executemany!6&26@execute!6&26@
-fet|2|fetchAll!6&26@fetchOne!6&26@
-ins|2|insertMany!7&34@insertOne!7&34@
-que|1|query!6&26@
-sel|2|selectAll!7&34@select!7&34@
-upd|1|updateName!7&34@
+__h|1|__handle!6&43@
+__i|3|__init__!7&18@__init__!7&34@__init__!8&42@
+del|2|delete!7&18@deleteId!8&42@
+exe|2|executemany!7&34@execute!7&34@
+fet|2|fetchAll!7&34@fetchOne!7&34@
+ins|3|insert!7&18@insertMany!8&42@insertOne!8&42@
+que|1|query!7&34@
+sel|3|selectAll!8&42@select!8&42@select!7&18@
+upd|1|update!7&18@
 -- END TREE

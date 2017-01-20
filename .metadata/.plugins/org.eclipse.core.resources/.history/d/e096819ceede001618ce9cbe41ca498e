@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+import pymysql
+
+class MySqlHelper(object):
+    
+    def __init__(self):
+        pass
+    
+    def insert(self,*args):
+        db = pymysql.connect(host='127.0.0.1',user='root',password='root',database='ebank')
+        cursor = db.cursor()
+        cursor.executemany(*args)
+        db.commit()
+        cursor.close()
+        db.close()
+        
+    def select(self,*args):
+        db = pymysql.connect(host='127.0.0.1',user='root',password='root',database='ebank')
+        cursor = db.cursor()
+        cursor.execute(*args)
+        data = cursor.fetchall()
+        cursor.close()
+        db.close()
+        return data
+
+    def update(self):
+        db = pymysql.connect(host='127.0.0.1',user='root',password='root',database='ebank')
+        cursor = db.cursor()
+        cursor.execute(*args)
+        db.commit()
+        cursor.close()
+        db.close()
+
+
+handle = MySqlHelper()
+sql = 'update test set passwd = %s where id = %s'
+params = (111111,2)
+
+handle.update(sql,params)
+
+
+
+       
+        
