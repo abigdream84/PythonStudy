@@ -1,3 +1,9 @@
 MODULES_MANAGER_V2
 example.MySql|/home/wyh/PythonStudy/day05/example/MySql.py
 example.__init__|/home/wyh/PythonStudy/day05/example/__init__.py
+example.index|/home/wyh/PythonStudy/day05/example/index.py
+example.model.__init__|/home/wyh/PythonStudy/day05/example/model/__init__.py
+example.model.test|/home/wyh/PythonStudy/day05/example/model/test.py
+example.settings|/home/wyh/PythonStudy/day05/example/settings.py
+example.utility.MySqlHelper|/home/wyh/PythonStudy/day05/example/utility/MySqlHelper.py
+example.utility.__init__|/home/wyh/PythonStudy/day05/example/utility/__init__.py

@@ -1,15 +1,45 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /home/wyh/PythonStudy/.metadata/.plugins/org.eclipse.core.resources/.projects/day05/com.python.pydev.analysis/v2_indexcache
-example.MySql|1484805940761105000|/home/wyh/PythonStudy/day05/example/MySql.py
+example.model.__init__|1484883454198526000|/home/wyh/PythonStudy/day05/example/model/__init__.py
+example.settings|1484889275697785000|/home/wyh/PythonStudy/day05/example/settings.py
+example.utility.MySqlHelper|1484897396806362000|/home/wyh/PythonStudy/day05/example/utility/MySqlHelper.py
+example.MySql|1484883321655614000|/home/wyh/PythonStudy/day05/example/MySql.py
+example.model.test|1484898464610270000|/home/wyh/PythonStudy/day05/example/model/test.py
 example.__init__|1484796418662371000|/home/wyh/PythonStudy/day05/example/__init__.py
+example.utility.__init__|1484883415447336000|/home/wyh/PythonStudy/day05/example/utility/__init__.py
+example.index|1484898345624474000|/home/wyh/PythonStudy/day05/example/index.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+7
+3=example.utility.MySqlHelper
+1=example.MySql
+7=test
+6=MySqlHelper
+4=example.model.test
+2=example.index
+5=test.__init__
 -- END DICTIONARY
 -- START TREE 1
-0
+8
+cur|1|cursor!11@
+db|1|db!11@
+mai|1|main!18@
+mys|1|MySqlHelper!25@
+par|1|params!11@
+rec|1|reCount!11@
+sql|1|sql!11@
+tes|1|test!33@
 -- END TREE
 -- START TREE 2
-0
+9
+__h|1|__handle!5&35@
+__i|2|__init__!6&26@__init__!7&34@
+del|1|deleteId!7&34@
+exe|2|executemany!6&26@execute!6&26@
+fet|2|fetchAll!6&26@fetchOne!6&26@
+ins|2|insertMany!7&34@insertOne!7&34@
+que|1|query!6&26@
+sel|2|selectAll!7&34@select!7&34@
+upd|1|updateName!7&34@
 -- END TREE

@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+import pymysql
+
+
+class MySqlClass(object):
+    
+    def __init__(self):
+        pass
+    
+    
+    
+    
+    
+
+
+
+
+
