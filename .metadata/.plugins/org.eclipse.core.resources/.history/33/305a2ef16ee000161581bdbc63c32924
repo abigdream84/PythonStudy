@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from ebank.utility.MySqlHelper import MySqlHelper
+
+class account(object):
+    
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def __getId(self,user_id):
+        sql = 'select id from account where id = %s' 
+        try:
+            user_id = self.__helper.select(sql,user_id)   
+        except Exception as e:
+            print(e)
+        return user_id
+    
+    def __getPwd(self,user_id):
+        sql = 'select passwd from account where id = %s'
+        try:
+            user_pwd = self.__helper.select(sql,user_id)
+        except Exception as e:
+            print(e)
+        return user_pwd
+    
+    
+    def chkUser(self,user_id):
+        if self.__getId(user_id):
+            return True
+        else:
+            print('User is not exist! Try again!')
+            return False
+        
+
+'''    
+acc = account()
+print(acc.chkUser('0004'))
+''' 
+    
+    
+

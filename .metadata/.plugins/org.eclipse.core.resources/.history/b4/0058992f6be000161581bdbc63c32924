@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from ebank.utility.MySqlHelper import MySqlHelper
+
+class account(object):
+    
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def __getId(self,id):
+        sql = 'select id from account where id = %s' 
+        try:
+            id = self.__helper.select(id)   
+        except Exception as e:
+            print(e)
+        return id
+    
+    def chkUser(self,name):
+        
+        
+    
+    
+    
+    
+    
+

@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from ebank.ui.ui import ui
+from ebank.model.account import account
+
+def main():
+    
+    while True:
+        ui_handle = ui()
+        ui.welcome()
+        ui.login()
+
+
+
+
+
+

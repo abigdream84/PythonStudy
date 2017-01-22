@@ -2,7 +2,10 @@ MODULES_MANAGER_V2
 ebank.__init__|/home/wyh/PythonStudy/day05/ebank/__init__.py
 ebank.index|/home/wyh/PythonStudy/day05/ebank/index.py
 ebank.model.__init__|/home/wyh/PythonStudy/day05/ebank/model/__init__.py
+ebank.model.account|/home/wyh/PythonStudy/day05/ebank/model/account.py
 ebank.settings|/home/wyh/PythonStudy/day05/ebank/settings.py
+ebank.ui.__init__|/home/wyh/PythonStudy/day05/ebank/ui/__init__.py
+ebank.ui.ui|/home/wyh/PythonStudy/day05/ebank/ui/ui.py
 ebank.utility.MySqlHelper|/home/wyh/PythonStudy/day05/ebank/utility/MySqlHelper.py
 ebank.utility.__init__|/home/wyh/PythonStudy/day05/ebank/utility/__init__.py
 example.MySql|/home/wyh/PythonStudy/day05/example/MySql.py

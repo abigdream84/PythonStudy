@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from ebank.ui.ui import ui
+from ebank.model.account import account
+
+def main():
+    
+    while True:
+        ui_handle = ui()
+        account_handle = account()
+        ui_handle.welcome()
+        user = ui_handle.login()
+        user_id = user[0]
+        user_pwd = user[1]
+        if not account_handle.chkUser(user_id):
+            exit()
+            
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
+
+

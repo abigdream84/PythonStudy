@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+
+class interface():
+    
+    def __init__(self):
+        print('********************************************************')
+        print('*                                                      *')
+        print('*             Welcome to our ebank!                    *')
+        print('*                                                      *')
+        print('********************************************************')
+
+    def login(self):
+        login_list = []
+        user = raw_input('Pleast input your username:')
+        login_list.append(user)
+        passwd = raw_input('Please input your password:')
+        login_list.append(passwd)
+        return login_list
+
+
+
+
+
