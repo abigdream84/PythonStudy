@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+import socket
+
+ip_addr = ('127.0.0.1',9999)
+
+sk = socket.socket()
+
+sk.bind(ip_addr)
+sk.listen(5)
+while True:
+    print('hello')
+    
+    conn, addr = sk.accept()
+    message = 'hahaha'
+    conn.send(message.encode(encoding='utf_8'))
+    conn.close()
+
+
+

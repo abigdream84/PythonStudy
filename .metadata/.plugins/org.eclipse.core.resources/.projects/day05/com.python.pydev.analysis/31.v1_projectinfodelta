@@ -1,0 +1,7 @@
+INSTUPexample.socketServer
+/home/wyh/PythonStudy/day05/example/socketServer.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0
+sk=3
+ip_addr=1
+message=4
+example.socketServer=2
