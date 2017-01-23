@@ -76,7 +76,7 @@ class account(object):
         if self.__getId(user_id):
             return True
         else:
-            print('User is not exist! Try again!')
+            print('User does not exist! Try again!')
             return False
         
     def chkPwd(self,user_id,user_pwd):

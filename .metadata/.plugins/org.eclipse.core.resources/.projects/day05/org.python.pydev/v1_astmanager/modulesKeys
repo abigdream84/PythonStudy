@@ -3,6 +3,7 @@ ebank.__init__|/home/wyh/PythonStudy/day05/ebank/__init__.py
 ebank.index|/home/wyh/PythonStudy/day05/ebank/index.py
 ebank.model.__init__|/home/wyh/PythonStudy/day05/ebank/model/__init__.py
 ebank.model.account|/home/wyh/PythonStudy/day05/ebank/model/account.py
+ebank.model.balance|/home/wyh/PythonStudy/day05/ebank/model/balance.py
 ebank.settings|/home/wyh/PythonStudy/day05/ebank/settings.py
 ebank.ui.__init__|/home/wyh/PythonStudy/day05/ebank/ui/__init__.py
 ebank.ui.ui|/home/wyh/PythonStudy/day05/ebank/ui/ui.py

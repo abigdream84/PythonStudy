@@ -33,10 +33,23 @@ class ui():
         choice = input('  Please choose the service:                    ')
         return choice
 
+    def y_or_n(self):
+        while True:
+            temp = input("Do you want to continue(Y/N):")
+            if (temp == 'Y' or temp =='y'):
+                return True
+            elif (temp == 'N' or temp == 'n'):
+                return False
+            else:
+                print("You give a illegal input. Please input Y or N.")
+                continue
+     
+        
 
 '''
 ui = ui()
-ui.login()
-ui.serviceList()
+tt = ui.y_or_n()
+print(tt)
 '''
+
 
