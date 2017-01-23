@@ -1,1 +1,10 @@
-DELSTRebank.model.balance
+INSTUPebank.ui.ui
+/home/wyh/PythonStudy/day05/ebank/ui/ui.py
+INFOS:&&1|1|2|0&&2|3|2|1&&2|4|2|1&&2|5|2|1&&2|6|2|1&&2|7|2|1
+y_or_n=7
+ebank.ui.ui=2
+ui=1
+serviceList=6
+__init__=3
+login=5
+welcome=4

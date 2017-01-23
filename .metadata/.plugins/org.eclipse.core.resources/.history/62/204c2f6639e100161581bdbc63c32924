@@ -10,7 +10,7 @@ class MySqlHelper(object):
         self.__db_conn = ebank.settings.db_conn
     
     def insert(self,*args):
-        db = pymysql.connect(**self.__db_conn)
+        db = pymysql.connect(host='127.0.0.1',user='root',password='root',database='ebank')
         cursor = db.cursor()
         cursor.executemany(*args)
         db.commit()
@@ -18,7 +18,7 @@ class MySqlHelper(object):
         db.close()
         
     def select(self,*args):
-        db = pymysql.connect(**self.__db_conn)
+        db = pymysql.connect(host='127.0.0.1',user='root',password='root',database='ebank')
         cursor = db.cursor()
         cursor.execute(*args)
         data = cursor.fetchall()
@@ -27,7 +27,7 @@ class MySqlHelper(object):
         return data
 
     def update(self,*args):
-        db = pymysql.connect(**self.__db_conn)
+        db = pymysql.connect(host='127.0.0.1',user='root',password='root',database='ebank')
         cursor = db.cursor()
         cursor.execute(*args)
         db.commit()
@@ -35,7 +35,7 @@ class MySqlHelper(object):
         db.close()
 
     def delete(self,*args):
-        db = pymysql.connect(**self.__db_conn)
+        db = pymysql.connect(host='127.0.0.1',user='root',password='root',database='ebank')
         cursor = db.cursor()
         cursor.execute(*args)
         db.commit()

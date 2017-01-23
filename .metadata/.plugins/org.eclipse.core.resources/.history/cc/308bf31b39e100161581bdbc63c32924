@@ -5,4 +5,4 @@
 
 db_conn = dict(host='127.0.0.1',user='root',password='root',database='ebank')
 
-
+print(db_conn)
