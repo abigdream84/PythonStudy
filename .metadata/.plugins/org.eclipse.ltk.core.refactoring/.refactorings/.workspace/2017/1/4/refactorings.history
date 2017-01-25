@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;day05/talk_demo/ui&apos;" deleteContents="false" description="Delete resource &apos;day05/talk_demo/ui&apos;" element1="/day05/talk_demo/ui" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1485325509232"/>&#x0A;<refactoring comment="Delete resource &apos;day05/talk_demo/utility/SocketHelper.py&apos;" deleteContents="false" description="Delete resource &apos;day05/talk_demo/utility/SocketHelper.py&apos;" element1="/day05/talk_demo/utility/SocketHelper.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1485325998270"/>
+</session>

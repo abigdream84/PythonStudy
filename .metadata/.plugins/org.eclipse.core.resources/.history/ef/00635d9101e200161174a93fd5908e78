@@ -1,0 +1,30 @@
+#!/usr/bin/env python3.5
+#coding:UTF-8
+
+import socket
+
+import platform
+print(platform.python_version())
+
+ip_addr = ('127.0.0.1',9999)
+
+client = socket.socket()
+client.connect(ip_addr)
+
+while True:
+    data = client.recv(1024)
+    data.decode('utf_8')
+    print(data)
+    print(type(data))
+    res=input('client:')
+    print(res)
+    print(type(res))
+    client.send(res.encode(encoding='utf_8', errors='strict'))
+    if res == 'exit':
+        break
+  
+client.close()
+
+
+
+

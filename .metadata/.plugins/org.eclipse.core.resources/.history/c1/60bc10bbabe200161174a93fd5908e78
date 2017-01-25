@@ -1,0 +1,74 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+import pymysql
+import talk_demo.settings
+
+class MySqlHelper(object):
+    
+    def __init__(self):
+        self.__db_conn = talk_demo.settings.db_conn
+    
+    def insert(self,*args):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.executemany(*args)
+        db.commit()
+        cursor.close()
+        db.close()
+        
+    def select(self,*args):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.execute(*args)
+        data = cursor.fetchall()
+        cursor.close()
+        db.close()
+        return data
+
+    def update(self,*args):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.execute(*args)
+        db.commit()
+        cursor.close()
+        db.close()
+
+    def delete(self,*args):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.execute(*args)
+        db.commit()
+        cursor.close()
+        db.close()
+    
+    def chkWord(self):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        sql1 = 'select count(*) from indextb'
+        row_count = cursor.execute(sql1)[0][0]
+        print(row_count)
+        print(type(row_count))
+        
+        '''
+        sql2 = 'select * from indextb'
+        cursor.execute(sql2)
+        for item in range(row_count):
+            data = cursor.fetchone()
+            print(data)
+            print(type(data))
+            item += item
+
+
+
+
+handle = MySqlHelper()
+#sql = 'delete from test where id = %s'
+#params = (2,)
+handle.chkWord()
+#print(handle.selectOne())
+
+
+
+       
+        

@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+
+from talk_demo.utility.MySqlHelper import MySqlHelper
+
+class indextb(object):
+    
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def __getCount(self):
+        sql = 'select count(*) from indextb'
+        row_count = self.__helper.select(sql)[0][0]
+        return row_count
+        
+    def chkWord(self):
+        
+        row = self.__getCount()
+        for item in range(row):
+            data = self.__helper.selectOne()
+            print(data)
+    
+    def chkWord(self,mess,dbname):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        sql1 = 'select count(*) from %s'
+        params = dbname
+        print(params)
+        print(type(params))
+        
+   
+        cursor.execute(sql1,params)
+        row_count = cursor.fetchall()[0][0]
+        print(row_count)
+      
+'''             
+        sql2 = 'select * from %s'
+        params = dbname
+        cursor.execute(sql2,params)
+        for item in range(row_count):
+            data = cursor.fetchone()
+            if mess.__contains__(data[chkcol]):
+                return data[rescol]
+            item += item
+        cursor.close()
+        db.close()
+
+'''
+
+
+
+
+aa = indextb()
+aa.chkWord()
+
+
+
+
+

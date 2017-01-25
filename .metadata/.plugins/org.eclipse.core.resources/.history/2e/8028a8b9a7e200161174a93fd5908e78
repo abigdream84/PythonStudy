@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+
+from talk_demo.utility.MySqlHelper import MySqlHelper
+
+class indextb(object):
+    
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def __getCount(self):
+        sql = 'select count(*) from indextb'
+        row_count = self.__helper.select(sql)[0][0]
+        return row_count
+        
+    
+    
+
+
+aa = indextb()
+print(aa.getCount())
+print(type(aa.getCount()))
+
+
+
+
+

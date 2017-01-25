@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+import pymysql
+import talk_demo.settings
+
+class MySqlHelper(object):
+    
+    def __init__(self):
+        self.__db_conn = talk_demo.settings.db_conn
+    
+    def insert(self,*args):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.executemany(*args)
+        db.commit()
+        cursor.close()
+        db.close()
+        
+    def select(self,*args):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.execute(*args)
+        data = cursor.fetchall()
+        cursor.close()
+        db.close()
+        return data
+
+    def update(self,*args):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.execute(*args)
+        db.commit()
+        cursor.close()
+        db.close()
+
+    def delete(self,*args):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.execute(*args)
+        db.commit()
+        cursor.close()
+        db.close()
+    
+    def selectOne(self):
+        db = pymysql.connect(**self.__db_conn)
+        cursor = db.cursor()
+        cursor.execute('select * from indextb')
+        data = cursor.fetchone()
+        cursor.close()
+        db.close()
+        return data
+
+
+
+
+handle = MySqlHelper()
+#sql = 'delete from test where id = %s'
+#params = (2,)
+
+handle.selectOne()
+
+
+
+       
+        

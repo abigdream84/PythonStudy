@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+import socket
+
+ip_addr = ('127.0.0.1,9998')
+
+sk = socket.socket()
+sk.bind(ip_addr)
+sk.listen(5)
+
+
+conn, addr = sk.accept()
+
+flag = True
+while flag:    
+    
+    data = 'hello'
+    mess = data.encode(encoding='utf_8')
+    conn.send(mess)
+
+
+
+
+
+
+
+
+
+
+
