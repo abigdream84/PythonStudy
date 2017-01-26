@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+
+import socketserver
+
+class MyFtpServer(object):
+    
+    def __init__(self):
+        pass
+    
+    def 
+
+
+
+
