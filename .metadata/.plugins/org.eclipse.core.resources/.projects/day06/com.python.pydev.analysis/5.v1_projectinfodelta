@@ -1,1 +1,9 @@
-DELSTRexample.ftp_ser1
+INSTUPexample.thread_event
+/home/wyh/PythonStudy/day06/example/thread_event.py
+INFOS:&&2|1|2|0&&2|3|2|0&&3|4|2|0&&3|5|2|0&&3|6|2|0
+p=5
+c=6
+example.thread_event=2
+producer=1
+event=4
+consumer=3

@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from threading import Thread
+import time
+
+class MyThread(Thread):
+    def run(self):
+        print('mythread')
+        Thread.run(self)
+
+def Foo(var):
+    for i in range(5):
+        print(var,str(i))
+        time.sleep(1)
+
+
+print('start')
+t1 = MyThread(target=Foo, args=('haha',))
+t1.start()
+print('end')
+
+
+
+
+
+

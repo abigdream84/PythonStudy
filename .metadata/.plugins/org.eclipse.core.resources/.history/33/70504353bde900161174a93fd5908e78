@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+
+import socketserver
+import os
+
+class MyFtpServer(object):
+    
+    def handle(self):
+        base_path = '/tmp'
+        conn = self.request
+        print "Connected"
+
+
+
+

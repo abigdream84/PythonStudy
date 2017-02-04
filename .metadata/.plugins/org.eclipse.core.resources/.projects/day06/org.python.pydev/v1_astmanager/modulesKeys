@@ -1,1 +1,7 @@
 MODULES_MANAGER_V2
+example.__init__|/home/wyh/PythonStudy/day06/example/__init__.py
+example.ftp_client1|/home/wyh/PythonStudy/day06/example/ftp_client1.py
+example.ftp_client2|/home/wyh/PythonStudy/day06/example/ftp_client2.py
+example.ftp_ser1|/home/wyh/PythonStudy/day06/example/ftp_ser1.py
+example.ftp_ser2|/home/wyh/PythonStudy/day06/example/ftp_ser2.py
+example.thread_demo1|/home/wyh/PythonStudy/day06/example/thread_demo1.py

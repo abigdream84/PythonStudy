@@ -1,0 +1,74 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+'''
+from threading import Thread
+import time
+
+class MyThread(Thread):
+    def run(self):
+        print('mythread')
+        Thread.run(self)
+
+def Foo(var):
+    for i in range(5):
+        print(var,str(i))
+        time.sleep(1)
+
+
+print('start')
+t1 = MyThread(target=Foo, args=('haha',))
+t1.start()
+print('end')
+'''
+
+from threading import Thread
+from queue import Queue
+import time
+
+class Producer(Thread):
+    def __init__(self,name,queue):
+        self.__Name = name
+        self.__Queue = queue
+        super(Producer,self).__init__()
+    
+    def run(self):
+        if self.__Queue.full():
+            time.sleep(1)
+        else:
+            self.__Queue.put('baozi')
+            print('%s made a baozi' %(self.__Name,))
+        #Thread.run(self)
+
+class Consumer(Thread):
+    def __init__(self,name,queue):
+        self.__Name = name
+        self.__Queue = queue
+        super(Consumer,self).__init__()
+
+    def run(self):
+        if self.__Queue.empty():
+            time.sleep(1)
+        else:
+            self.__Queue.get()
+            print('%s get a baozi' %(self.__Name,))
+        #Thread.run(self)
+
+que = Queue(20)
+p1 = Producer('p1',que)
+p1.start()
+p2 = Producer('p2',que)
+p2.start()
+p3 = Producer('p3',que)
+p3.start()
+
+for item in range(5):
+    name = 'c%d' %(item,)
+    temp = Consumer(name,que)
+
+
+
+
+
+
+
