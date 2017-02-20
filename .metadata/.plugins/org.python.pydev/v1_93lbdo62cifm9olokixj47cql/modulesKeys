@@ -2200,6 +2200,7 @@ sqlite3.dump|/usr/lib/python3.5/sqlite3/dump.py
 sre_compile|/usr/lib/python3.5/sre_compile.py
 sre_constants|/usr/lib/python3.5/sre_constants.py
 sre_parse|/usr/lib/python3.5/sre_parse.py
+ssh_import_id.__init__|/usr/lib/python3/dist-packages/ssh_import_id/__init__.py
 ssl|/usr/lib/python3.5/ssl.py
 stat|/usr/lib/python3.5/stat.py
 statistics|/usr/lib/python3.5/statistics.py

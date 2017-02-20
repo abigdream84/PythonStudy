@@ -1,0 +1,219 @@
+#!/usr/bin/env python
+#coding:UTF-8
+'''
+from multiprocessing import Pool
+import time
+
+def f(x):
+    time.sleep(1)
+    print(x*x)
+    return x*x
+
+if __name__ == '__main__':
+    p = Pool(6)
+    print(p.map(f,[1,2,3,4,5,6]))
+'''
+'''
+from multiprocessing import Process
+import time
+import os
+
+def info(title):
+    print(title)
+    print('module name:'),__name__
+    print('ppid:',os.getppid())
+    print('pid:',os.getpid())
+
+def f(name):
+    info('function f')
+    print('hello',name)
+    
+if __name__ == "__main__":
+    info('mainline')
+    print('-----------------')
+    p = Process(target=f, args=('bob',))
+    p.start()
+    p.join()
+'''    
+'''
+from multiprocessing import Process, Queue
+from queue import Queue as Q2
+
+def f(q,n):
+    q.put([n,'hello'])
+#    print(q.get())
+
+if __name__ == '__main__':
+    q = Queue()
+    for i in range(5):
+        p = Process(target=f, args=(q,i))
+        p.start()
+    
+    while True:
+        print(q.get())
+'''
+'''
+from multiprocessing import Process, Lock
+import time
+def f(l,i):
+    time.sleep(1)
+    l.acquire()
+    
+    print('hello',i)
+    l.release()
+    
+if __name__ == '__main__':
+    lock = Lock()
+    
+    for num in range(10):
+        Process(target=f, args=(lock,num)).start()
+'''
+'''
+from multiprocessing import Process 
+import os
+import time
+
+def info(title):
+    print(title)
+    print('module name:',__name__)
+    if hasattr(os, 'getppid'):
+        print('parent process:',os.getppid())
+    time.sleep(2)
+    print('process id:',os.getpid())
+
+def f(name):
+    info('function f')
+    print('hello',name)
+
+if __name__ == "__main__":
+    info('mainline')
+    print('-----------------')
+    p = Process(target=f, args=('bob',))
+    p.start()
+    p.join()
+'''
+'''
+from multiprocessing import Process, Queue
+def f(q,n):
+    q.put([n,'hello'])
+    print(q)
+    
+if __name__ == '__main__':
+    q = Queue()
+    for i in range(5):
+        p = Process(target=f, args=(q,i))
+        p.start()
+        print(q.get())
+    print('final'+q.get())
+'''
+'''
+#from multiprocessing import Process
+from threading import Thread
+
+def run(fun_list,n):
+    fun_list.append(n)
+    print(fun_list)
+
+if __name__ == '__main__':
+    fun_list = []
+    for i in range(10):
+#        p = Process(target=run,args=(fun_list,i))
+        p = Thread(target=run,args=(fun_list,i))
+        p.start()
+'''
+'''
+from multiprocessing import Process,Queue
+#from queue import Queue
+#from threading import Thread
+
+def run(fun_list,n):
+    fun_list.put(n)
+#    print(fun_list.get())
+#    print(q.qsize())
+
+if __name__ == '__main__':
+    q = Queue()
+    q.put('ddd')
+    for i in range(10):
+        p = Process(target=run,args=(q,i))
+#        p = Thread(target=run,args=(q,i))
+        p.start()
+    while q:
+        print('qsize:',q.qsize())
+        print(q.get()) 
+'''
+'''
+from multiprocessing import Process, Lock
+def f(l,i):
+    l.acquire()
+    print('hello',i)
+    l.release()
+
+if __name__ == '__main__':
+    lock = Lock()
+    for num in range(10):
+        p = Process(target=f, args=(lock,num))
+        p.start()
+'''
+'''
+from multiprocessing import Process, Manager
+
+def f(d,l):
+    d[1] = '1'
+    d['2'] = 2
+    d[0.25] = None
+    l.reverse()
+
+if __name__ == '__main__':
+    manager = Manager()
+    d = manager.dict()
+    l = manager.list(range(10))
+    for i in range(5):
+        p = Process(target=f, args=(d,l))
+        p.start()
+        p.join()
+        print(d)
+        print(l)
+'''
+'''
+from multiprocessing import Process, Manager
+import time
+
+def f(l,i):
+    time.sleep(1)
+    l.append(i)
+    print(l)
+
+if __name__ == '__main__':
+    manager = Manager()
+    l = manager.list()
+    for i in range(5):
+        p = Process(target=f, args=(l,i))
+        p.start()
+        p.join()
+    print(l)
+'''
+from multiprocessing import Pool
+import time
+
+def f(x):
+    print(x*x)
+    time.sleep(1)
+    return x*x
+
+if __name__ == '__main__':
+    pool = Pool(processes=4)
+    res_list = []
+    for i in range(5):
+        res = pool.apply_async(f,(i,))
+        res_list.append(res)
+    
+    for r in res_list:
+        print(r.get())
+    
+
+
+
+
+
+

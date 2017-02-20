@@ -1,0 +1,62 @@
+#!/usr/bin/env python
+#coding:UTF-8
+'''
+from multiprocessing import Pool
+import time
+
+def f(x):
+    time.sleep(1)
+    print(x*x)
+    return x*x
+
+if __name__ == '__main__':
+    p = Pool(6)
+    print(p.map(f,[1,2,3,4,5,6]))
+'''
+'''
+from multiprocessing import Process
+import time
+import os
+
+def info(title):
+    print(title)
+    print('module name:'),__name__
+    print('ppid:',os.getppid())
+    print('pid:',os.getpid())
+
+def f(name):
+    info('function f')
+    print('hello',name)
+    
+if __name__ == "__main__":
+    info('mainline')
+    print('-----------------')
+    p = Process(target=f, args=('bob',))
+    p.start()
+    p.join()
+'''    
+
+from multiprocessing import Process, Queue
+from queue import Queue as Q2
+
+def f(q,n):
+    q.put([n,'hello'])
+
+if __name__ == '__main__':
+    q = Q2()
+    for i in range(5):
+        p = Process(target=f, args=(q,i))
+        p.start()
+    
+#    while True:
+#        print(q.get())
+
+
+
+
+
+
+
+
+
+

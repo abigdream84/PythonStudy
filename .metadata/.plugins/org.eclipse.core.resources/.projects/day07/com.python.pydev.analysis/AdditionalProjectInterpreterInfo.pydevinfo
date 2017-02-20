@@ -1,0 +1,30 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/wyh/PythonStudy/.metadata/.plugins/org.eclipse.core.resources/.projects/day07/com.python.pydev.analysis/v2_indexcache
+example.__init__|1486366473354811000|/home/wyh/PythonStudy/day07/example/__init__.py
+example.multiprocess_demo1|1487558250151976000|/home/wyh/PythonStudy/day07/example/multiprocess_demo1.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=example.multiprocess_demo1
+-- END DICTIONARY
+-- START TREE 1
+14
+d|0|
+f|1|f!10@
+fun|0|
+inf|0|
+l|0|
+loc|0|
+man|0|
+p|0|
+p1|0|
+p2|0|
+poo|1|pool!11@
+q|0|
+res|2|res_list!11@res!11@
+run|0|
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

@@ -1,0 +1,8 @@
+INSTUPexample.multiprocess_demo1
+/home/wyh/PythonStudy/day07/example/multiprocess_demo1.py
+INFOS:&&2|1|2|0&&3|3|2|0&&3|4|2|0&&3|5|2|0
+res=5
+f=1
+pool=3
+res_list=4
+example.multiprocess_demo1=2
