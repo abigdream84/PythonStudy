@@ -1,0 +1,9 @@
+create table u_table(u_id int auto_increment primary key, u_name varchar(20), unique(u_name));
+
+create table g_table(g_id int auto_increment primary key, g_name varchar(20), unique(g_name));
+
+create table s_table(s_id int auto_increment primary key, s_name varchar(20), s_ip varchar(20), unique(s_ip));
+
+create table g_u_relation(g_u_id int auto_increment primary key, f_g_id int, f_u_id int, foreign key(f_g_id) references g_table(g_id), foreign key(f_u_id) references u_table(u_id), unique(f_g_id,f_u_id));
+
+create table s_g_u_relation(s_g_u_id int auto_increment primary key, f_s_id int, f_g_id int, f_u_id int, foreign key(f_s_id) references s_table(s_id), foreign key(f_u_id) references u_table(u_id), foreign key(f_g_id) references g_table(g_id), unique(f_s_id,f_g_id,f_u_id));
