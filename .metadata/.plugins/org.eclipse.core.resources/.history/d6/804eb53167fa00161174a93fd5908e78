@@ -1,0 +1,76 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from audit_demo.utility.MySqlHelper import MySqlHelper
+from audit_demo.model.s_g_u_relation import s_g_u_relation
+
+class s_table(object):
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def add_ser(self,sername,serip):
+        sql = 'insert into s_table(s_name,s_ip) values(%s,%s)'
+        params = (sername, serip)
+        try:
+            self.__helper.insert_one(sql,params)
+        except Exception as e:
+            print(e)
+        
+    def get_ser(self,sername):
+        sql = 'select s_id from s_table where s_name = %s' 
+        try:
+            s_id = self.__helper.select(sql,sername)[0][0]   
+        except Exception as e:
+            print(e)
+        return s_id
+    
+    def upd_sername(self,sername_old,sername_new):
+        sql = 'update s_table set s_name = %s where s_name = %s'
+        params = (sername_new, sername_old)
+        try:
+            self.__helper.update(sql,params)
+        except Exception as e:
+            print(e)
+
+    def upd_serip(self,serip_old,serip_new):
+        sql = 'update s_table set s_ip = %s where s_ip = %s'
+        params = (serip_new, serip_old)
+        try:
+            self.__helper.update(sql,params)
+        except Exception as e:
+            print(e)
+
+
+    def del_ser(self, serip):
+        sql = 'delete from s_table where s_ip=%s'
+        g_u_handle = s_g_u_relation()
+        if g_u_handle.get_s_u_g_id(serip):
+            g_u_handle.del_s_g_u(serip)
+            try:
+                self.__helper.delete(sql,serip)
+            except Exception as e:
+                print(e)
+        else:
+            try:
+                self.__helper.delete(sql,serip)
+            except Exception as e:
+                print(e)
+
+    def get_u_s_list(self, username): 
+        s_g_u_handle = s_g_u_relation()
+        sql = 'select s_ip from s_table where s_id = %s'
+        ser_list = []
+        try:
+            s_u_list = s_g_u_handle.get_s_u_ser(username)
+            for i in s_u_list:
+                s_ip = self.__helper.select(sql,i)
+                ser_list.append(s_ip)
+            return s_u_list
+        except Exception as e:
+            print(e)
+        
+
+
+
+t=s_table()
+t.del_ser('192.168.0.2')

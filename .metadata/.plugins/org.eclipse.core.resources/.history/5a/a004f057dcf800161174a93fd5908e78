@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from audit_demo.utility.MySqlHelper import MySqlHelper
+from audit_demo.model.g_table import g_table
+#from audit_demo.model.u_table import u_table
+
+
+class g_u_relation(object):
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def add_u_g(self,username,gpname):
+        u_ins = u_table()
+        g_ins = g_table()
+        uid = str(u_ins.get_user(username))
+        gid = str(g_ins.get_grp(gpname))
+        sql = 'insert into g_u_relation(f_g_id,f_u_id) values(%s , %s)'
+        params = (gid,uid)
+        try:
+            self.__helper.insert_one(sql,params)
+            return True
+        except Exception as e:
+            print(e)
+            return False
+    
+    def get_u_id(self, username):
+        u_ins = u_table()
+        uid = str(u_ins.get_user(username))
+        sql = 'select g_u_id from g_u_relation where g_u_id = %s'
+        params = (uid)
+        try:
+            g_u_id_list = self.__helper.select(sql,params)
+            return g_u_id_list
+        except Exception as e:
+            print(e)
+            return False
+        
+        
+        
+
+'''
+t=g_u_relation()
+print(t.get_u_id('user2'))
+'''
+
+
+

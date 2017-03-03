@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from audit_demo.utility.MySqlHelper import MySqlHelper
+
+class u_table(object):
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def add_user(self,username):
+        sql = 'insert into u_table(u_name) values(%s)'
+        params = (username,)
+        try:
+            self.__helper.insert(sql,params)
+            return True
+        except Exception as e:
+            print(e)
+            return False
+        
+    def get_grp(self,username):
+        sql = 'select u_id from u_table where u_name = %s' 
+        try:
+            u_id = self.__helper.select(sql,username)[0][0]   
+        except Exception as e:
+            print(e)
+        return u_id
+    
+    def upd_grp(self,username_old,username_new):
+        sql = 'update u_table set u_name = %s where u_name = %s'
+        params = (username_new, username_old)
+        try:
+            self.__helper.update(sql,params)
+        except Exception as e:
+            print(e)
+
+

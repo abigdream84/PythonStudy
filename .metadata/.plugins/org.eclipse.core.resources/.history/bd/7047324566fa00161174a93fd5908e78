@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from audit_demo.model.u_table import u_table
+from audit_demo.model.s_g_u_relation import s_g_u_relation
+
+
+def get_ser_list(username):
+    s_g_u_handle = s_g_u_relation()
+
+
+

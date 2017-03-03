@@ -1,0 +1,14 @@
+INSTUPaudit_demo.model.s_table
+/home/wyh/PythonStudy/paramiko_demo/audit_demo/model/s_table.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&2|6|2|1&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1
+audit_demo.model.s_table=2
+__helper=4
+upd_sername=8
+get_u_s_list=11
+s_table.__init__=5
+s_table=1
+upd_serip=9
+del_ser=10
+__init__=3
+add_ser=6
+get_ser=7

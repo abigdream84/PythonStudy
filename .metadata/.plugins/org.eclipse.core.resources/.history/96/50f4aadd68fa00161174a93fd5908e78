@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from audit_demo.model.s_table import s_table
+
+
+
+def get_ser_list(username):
+    s_handle = s_table()
+    s_list = s_handle.get_u_s_list(username)
+    return s_list
+    
+
+
+if __name__ == '__main__':
+    get_ser_list('user1')
+

@@ -23,8 +23,10 @@ example.test|/home/wyh/PythonStudy/day05/example/test.py
 example.utility.MySqlHelper|/home/wyh/PythonStudy/day05/example/utility/MySqlHelper.py
 example.utility.__init__|/home/wyh/PythonStudy/day05/example/utility/__init__.py
 talk_demo.__init__|/home/wyh/PythonStudy/day05/talk_demo/__init__.py
+talk_demo.index|/home/wyh/PythonStudy/day05/talk_demo/index.py
 talk_demo.model.__init__|/home/wyh/PythonStudy/day05/talk_demo/model/__init__.py
 talk_demo.model.indextb|/home/wyh/PythonStudy/day05/talk_demo/model/indextb.py
 talk_demo.settings|/home/wyh/PythonStudy/day05/talk_demo/settings.py
+talk_demo.talk_client|/home/wyh/PythonStudy/day05/talk_demo/talk_client.py
 talk_demo.utility.MySqlHelper|/home/wyh/PythonStudy/day05/talk_demo/utility/MySqlHelper.py
 talk_demo.utility.__init__|/home/wyh/PythonStudy/day05/talk_demo/utility/__init__.py

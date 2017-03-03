@@ -1,0 +1,58 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from audit_demo.utility.MySqlHelper import MySqlHelper
+
+class g_u_relation(object):
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def get_uid(self,username):
+        sql = 'select u_id from u_table where u_name = %s' 
+        try:
+            u_id = self.__helper.select(sql,username)[0][0]   
+        except Exception as e:
+            print(e)
+        return u_id
+    
+    def get_gid(self,gpname):
+        sql = 'select g_id from g_table where g_name = %s' 
+        try:
+            g_id = self.__helper.select(sql,gpname)[0][0]   
+        except Exception as e:
+            print(e)
+        return g_id 
+    
+    def add_u_g(self,username,gpname):
+        uid = str(self.get_user(username))
+        gid = str(self.get_grp(gpname))
+        sql = 'insert into g_u_relation(f_g_id,f_u_id) values(%s , %s)'
+        params = (gid,uid)
+        try:
+            self.__helper.insert_one(sql,params)
+            return True
+        except Exception as e:
+            print(e)
+            return False
+    
+    def get_u_id(self, username):
+        uid = str(self.get_user(username))
+        sql = 'select g_u_id from g_u_relation where g_u_id = %s'
+        params = (uid)
+        try:
+            g_u_id_list = self.__helper.select(sql,params)
+            return g_u_id_list
+        except Exception as e:
+            print(e)
+            return False
+        
+        
+        
+
+
+t=g_u_relation()
+print(t.get_u_id('user2'))
+
+
+
+

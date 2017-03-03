@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+#coding:UTF-8
+
+from audit_demo.utility.MySqlHelper import MySqlHelper
+from audit_demo.model.g_table import g_table
+from audit_demo.model.u_table import u_table
+
+
+class g_u_relation(object):
+    def __init__(self):
+        self.__helper = MySqlHelper()
+    
+    def add_g_u(self,username,gpname):
+        u_ins = u_table()
+        g_ins = g_table()
+        uid = u_ins.get_user(username)
+       
+
